@@ -120,10 +120,11 @@
   <footer>© 2025 Zoro Carioca</footer>
 
   <!-- Música do GitHub -->
-  <audio autoplay loop>
-    <source src="musica.mp3" type="audio/mpeg">
-    Seu navegador não suporta áudio.
-  </audio>
+<audio id="musica" autoplay loop muted>
+  <source src="musica.mp3" type="audio/mpeg">
+</audio>
+<button onclick="document.getElementById('musica').muted=false">🔊 Ativar Música</button>
 </body>
 </html>
+
 
