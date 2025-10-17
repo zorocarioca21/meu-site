@@ -18,13 +18,15 @@
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      /* Fundo ajustado para não cortar */
       background: url('background.jpg') no-repeat center center fixed;
-      background-size: cover;
+      background-size: cover; /* Mantém a proporção e cobre toda a tela */
+      background-position: center center;
       overflow: hidden;
       position: relative;
     }
 
-    /* Overlay escuro por cima da imagem */
+    /* Overlay escuro */
     .overlay {
       position: absolute;
       top: 0;
@@ -92,6 +94,23 @@
       font-size: 0.9em;
       color: #ccc;
     }
+
+    /* Botão de música */
+    #btnMusica {
+      margin-top: 20px;
+      padding: 10px 20px;
+      font-size: 16px;
+      border: none;
+      border-radius: 8px;
+      background-color: #00ff99;
+      color: #000;
+      cursor: pointer;
+      transition: 0.3s;
+    }
+
+    #btnMusica:hover {
+      opacity: 0.8;
+    }
   </style>
 </head>
 <body>
@@ -115,16 +134,26 @@
         <i class="fab fa-tiktok"></i> TikTok
       </a>
     </div>
+
+    <!-- Botão para tocar música -->
+    <button id="btnMusica">▶️ Tocar Música</button>
   </div>
 
   <footer>© 2025 Zoro Carioca</footer>
 
-  <!-- Música do GitHub -->
-<audio id="musica" autoplay loop muted>
-  <source src="musica.mp3" type="audio/mpeg">
-</audio>
-<button onclick="document.getElementById('musica').muted=false">🔊 Ativar Música</button>
+  <!-- Música do repositório -->
+  <audio id="musica" loop>
+    <source src="musica.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
+
+  <script>
+    const btn = document.getElementById('btnMusica');
+    const audio = document.getElementById('musica');
+    btn.addEventListener('click', () => {
+      audio.play();
+      btn.style.display = 'none'; // esconde o botão depois de tocar
+    });
+  </script>
 </body>
 </html>
-
-
