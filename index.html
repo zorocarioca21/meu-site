@@ -3,42 +3,61 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Meu Bot</title>
-  <!-- Link para os ícones do Font Awesome -->
+  <title>Zoro Bot - Bots Personalizados</title>
+  <!-- Font Awesome para ícones -->
   <script src="https://kit.fontawesome.com/a81368914c.js" crossorigin="anonymous"></script>
   <style>
     body {
       font-family: 'Arial', sans-serif;
-      background: linear-gradient(135deg, #1e1e1e, #2a2a2a);
-      color: #f0f0f0;
+      margin: 0;
+      padding: 0;
+      color: #fff;
+      text-align: center;
+      min-height: 100vh;
       display: flex;
       flex-direction: column;
-      align-items: center;
       justify-content: center;
-      min-height: 100vh;
-      margin: 0;
+      align-items: center;
+      background: url('https://www.instagram.com/zorocarioca21/p/C7hr25TRWZc') no-repeat center center fixed;
+      background-size: cover;
+      overflow: hidden;
+    }
+
+    /* Fundo escuro transparente para destacar o texto */
+    .overlay {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0,0,0,0.6);
+      z-index: 0;
+    }
+
+    .content {
+      position: relative;
+      z-index: 1;
+      max-width: 800px;
       padding: 20px;
-      text-align: center;
     }
 
     h1 {
-      color: #00ff99;
       font-size: 3em;
+      color: #00ff99;
       margin-bottom: 20px;
     }
 
     p {
       font-size: 1.2em;
-      max-width: 600px;
+      line-height: 1.6;
       margin-bottom: 40px;
-      line-height: 1.5;
     }
 
     .buttons {
       display: flex;
       gap: 20px;
-      flex-wrap: wrap;
       justify-content: center;
+      flex-wrap: wrap;
     }
 
     .buttons a {
@@ -70,26 +89,38 @@
     footer {
       margin-top: 50px;
       font-size: 0.9em;
-      color: #888;
+      color: #ccc;
     }
   </style>
 </head>
 <body>
-  <h1>Bem-vindo ao meu Bot!</h1>
-  <p>Aqui você encontra todas as informações do meu bot de WhatsApp. Ele faz vendas, gerenciamento de grupos e muito mais!</p>
+  <div class="overlay"></div>
 
-  <div class="buttons">
-    <a class="whatsapp" href="https://wa.me/5521983016115" target="_blank">
-      <i class="fab fa-whatsapp"></i> WhatsApp
-    </a>
-    <a class="instagram" href="https://instagram.com/zorocarioca21" target="_blank">
-      <i class="fab fa-instagram"></i> Instagram
-    </a>
-    <a class="tiktok" href="https://www.tiktok.com/@zoro_carioca21" target="_blank">
-      <i class="fab fa-tiktok"></i> TikTok
-    </a>
+  <div class="content">
+    <h1>Zoro Bot</h1>
+    <p>Olá! Eu sou o Zoro, desenvolvedor de bots personalizados para WhatsApp.  
+    Meu principal projeto é o <strong>Zoro Bot</strong>, que possui diversos comandos de gerenciamento de grupos, brincadeiras e jogos para aumentar a diversão da galera.  
+    Se você quer um bot sob medida para seu grupo, posso criar algo exclusivo para você!</p>
+
+    <div class="buttons">
+      <a class="whatsapp" href="https://wa.me/5521983016115" target="_blank">
+        <i class="fab fa-whatsapp"></i> WhatsApp
+      </a>
+      <a class="instagram" href="https://instagram.com/zorocarioca21" target="_blank">
+        <i class="fab fa-instagram"></i> Instagram
+      </a>
+      <a class="tiktok" href="https://www.tiktok.com/@zoro_carioca21" target="_blank">
+        <i class="fab fa-tiktok"></i> TikTok
+      </a>
+    </div>
   </div>
 
   <footer>© 2025 Zoro Carioca</footer>
+
+  <!-- Música tocando automaticamente -->
+  <audio autoplay loop>
+    <source src="https://www.bensound.com/bensound-music/bensound-sunny.mp3" type="audio/mpeg">
+    Seu navegador não suporta áudio.
+  </audio>
 </body>
 </html>
